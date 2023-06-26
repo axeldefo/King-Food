@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6{
+    text-transform: uppercase;
+    font-family: "GodOfWar";
+}
+
+p, button{
+    font-family: "Poppins";
+}
+body {
+    background-color: #fff;
+}
+
+/*navbar*/
+.navbar{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#logo{
+    color: #27ae60;
+    font-size: 30px;
+    font-weight: bolder;
+    
+}
+
+.navbar .container{
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+.navbar .container a{
+    color: #192a56;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 500;
+    margin:0 15px;
+    transition: 0.3s;
+}
+
+.navbar .container a:hover{
+    color: #27ae60;
+   
+}
+
+@media (max-width: 700px){
+    .navbar .container a{
+        font-size: 1em;
+    }
+
+    .navbar .container i{
+        width: 50px;
+    }
+}
+
+/*Section 1*/
+.sec1 .container{
+    display: flex;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 50px;
+}
+
+.sec1 .container .left h1{
+    font-size: 8em;
+    color: #27ae60;
+    text-shadow: 0px 0px 10px #45af71;
+}
+.sec1 .container .left p{
+    color: #888888;
+    max-width: 600px;
+    font-family: "Poppins";
+    font-weight: bold;
+    margin: 30px 0;
+}
+
+.sec1 .container .left button{
+    width: 300px; height: 65px;
+    border-radius: 15px;
+    border: none;
+    color: #ffff;
+    background-color: #27ae60;
+    font-size: 1.2em;
+    font-weight: 900;
+    box-shadow: 0px 0px 10px #45af71;
+    letter-spacing: 1px;
+}
+
+.sec1 .container .right img{
+    position: relative ;
+    height: 650px;
+    z-index: -999;
+}
+
+.sec1 .container .right {
+    position: relative ;
+}
+.sec1 .container .right::after{
+    content: url(../image/coca.png );
+    position: absolute;
+    top: 1%;
+    left: -20%;
+    animation: bounce 3s infinite ease-in-out;
+   
+}
+
+.sec1 .container .right::before{
+    content: url(../image/frite.png );
+    position: absolute;
+    top: 15%;
+    right: -10%;
+    animation: bounce 5s infinite ease-in-out;
+}
+
+@keyframes bounce{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+
+
+}
+
+
+@media (max-width: 1500px){
+    .sec1 .container .left h1{
+        font-size: 6em;        
+    }
+}
+@media (max-width: 1300px){
+    .sec1 .container {
+       flex-direction: column;
+       max-width: 150px;
+    }
+    .sec1 .left{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+     }  
+     .sec1 .right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+    .sec1 .right img{
+        margin-top: 50px;
+
+    }
+}
+
+@media (max-width: 650px){
+    .sec1 .container .left h1{
+        font-size: 4em;
+    }
+
+    .sec1 .container .left p {
+        margin: 40px 35px;
+    }
+}
+
+/*Section 2*/
+.sec2{
+    margin: 90px 0;
+}
+.sec2 .container{
+    display: flex;
+    align-items: center;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.sec2 .big-card{
+    position: relative;
+    width: 95%;
+    margin: 100 auto;
+    background-color: #1f2f57;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    animation: shadow 3s infinite ease-in-out;
+}
+
+@keyframes shadow {
+    0%{
+        box-shadow: 0px 0px 45px 30px #45af71;
+    }
+    20%{
+        box-shadow: 0px 0px 45px 0px #45af71;
+    }
+    40%{
+        box-shadow: 0px 0px 45px 15px #45af71;
+    }
+    70%{
+        box-shadow: 0px 0px 45px -10px #45af71;
+    }
+    100%{
+        box-shadow: 0px 0px 45px 30px #45af71;
+    }
+}
+
+.sec2 .big-card .arrow::before{
+    position: absolute;
+    content: "\f107";
+    font-family: "FontAwesome";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 0%;
+    left: 50%;
+    border-radius: 50px;
+    transform: translate(-50%, 50%);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5em;
+    background-color: #45af71;
+    color: #192a56;
+
+}
+.sec2 .big-card .left{
+    margin-right: 80px;
+}
+
+.sec2 .big-card .left img{
+    position: relative;
+    top: -60px;
+}
+
+.sec2 .big-card .right{
+    max-width: 500px;
+}
+
+.sec2 .big-card .right h4{
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.sec2 .big-card .right h1{
+    color: #45af71;
+    font-size: 5em;
+    margin-bottom: 30px;
+}
+
+.sec2 .big-card p{
+    color: #fff;
+    line-break: anywhere;
+}
+
